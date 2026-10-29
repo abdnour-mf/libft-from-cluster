@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:18:11 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/19 18:05:15 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:59:05 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (res);
 }
 
-static char to_up(unsigned int i, char c)
+/*static char to_up(unsigned int i, char c)
 {
 	(void)i;
 	if (c >= 'A' && c <= 'Z')
@@ -38,7 +38,7 @@ static char to_up(unsigned int i, char c)
 	return (c);
 }
 
-/* int main()
+ int main()
 {
 	char *res = ft_strmapi("catHUIUG", to_up);
 	printf("%s\n", res);

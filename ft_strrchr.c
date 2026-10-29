@@ -6,24 +6,11 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 12:08:49 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/15 13:38:39 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:55:34 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t ft_strlen(const char *s)
-{
-    size_t len;
-    
-    len = 0;
-    while (*s)
-    {
-        s++;
-        len++;
-    }
-    return (len);
-}
 
 char *ft_strrchr(const char *s, int c)
 {
@@ -43,7 +30,7 @@ char *ft_strrchr(const char *s, int c)
 
 /* int main()
 {
-    /* char s[] = "momo w)dhdh";
+    char s[] = "momo w)dhdh";
     char c = 'o';
     
     printf("%s \t %s \n","%s\n", ft_strrchr(s,c)); 

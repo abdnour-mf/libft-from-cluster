@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 13:23:30 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/19 15:15:15 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:58:45 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,6 @@ static int counter(int n)
 	}
 	return (count);
 }
-
-//n = 12345
-
 
 char *ft_itoa(int n)
 {
@@ -71,7 +68,7 @@ char *ft_itoa(int n)
 } */
 
 
-int	main(void)
+/* int	main(void)
 {
 	printf("ft: %s | expected: %s\n", ft_itoa(0), "0");
 	printf("ft: %s | expected: %s\n", ft_itoa(-0), "0");
@@ -86,4 +83,4 @@ int	main(void)
 	printf("ft: %s | expected: %s\n", ft_itoa(-2147483647), "-2147483647");
 
 	return (0);
-}
+} */

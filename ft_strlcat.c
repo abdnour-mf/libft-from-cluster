@@ -6,24 +6,12 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:33:16 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/14 16:43:14 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:49:19 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
-{
-	size_t len;
-	
-	len = 0;
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
-}
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -47,7 +35,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 
-#include <string.h>
+/* #include <string.h>
 int main()
 {
 	char dst[20] = "hello";
@@ -55,4 +43,4 @@ int main()
 	
 	printf("Return: %zu\n", ft_strlcat(dst, src, 0));
 	printf("String: %s\n", dst);
-}
+} */

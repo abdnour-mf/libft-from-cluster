@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 17:53:53 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/19 18:07:31 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:59:29 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     }
 }
 
-static void to_up(unsigned int i, char *c)
+/* static void to_up(unsigned int i, char *c)
 {
     (void)i;
     if (*c >= 'a' && *c <= 'z')
@@ -40,4 +40,4 @@ int main(void)
     ft_striteri(str, to_up);
     printf("%s\n", str);
     return (0);
-}
+} */

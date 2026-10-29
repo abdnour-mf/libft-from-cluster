@@ -6,24 +6,11 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 14:10:22 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/14 15:32:26 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:49:14 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t ft_strlen(const char *s)
-{
-	size_t len;
-	
-	len = 0;
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
-}
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -42,7 +29,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(src));
 }
 
-int main()
+/* int main()
 {
 	char *src = "hello world";
 	char dest[3];
@@ -50,4 +37,4 @@ int main()
 	printf("%s\n", dest);
 	
 	return 0;
-}
+} */

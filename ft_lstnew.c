@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:58:13 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/21 19:18:38 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:59:49 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list *ft_lstnew(void *content)
 	return (new);
 }
 
-int main()
+/* int main()
 {
 	t_list *new = ft_lstnew("A");
 	t_list *n = ft_lstnew("2");
@@ -34,4 +34,4 @@ int main()
 	
 	
 	printf("%s\n", (char *)new->content);
-}
+} */

@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 16:27:44 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/14 14:10:03 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:47:56 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memset(void *b, int c, size_t len)
 #include <stdio.h>
 int main()
 {
-	/* char str1[] = "un dia de partit";
+	char str1[] = "un dia de partit";
     char str2[] = "un dia de partit";
 
     ft_memset(str1 + 3, '.', 3);

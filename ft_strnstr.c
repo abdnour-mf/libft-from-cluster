@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 14:35:53 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/17 12:15:12 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:56:03 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ char *ft_strnstr(const char *str, const char *sub, size_t len)
 	return (NULL);
 }
 
-
-#include <stdio.h>
-#include <string.h>
 
 //int	main(void)
 //{
@@ -102,7 +99,7 @@ char *ft_strnstr(const char *str, const char *sub, size_t len)
 //}
 
 
-int main()
+/* int main()
 {
 	char str[] = "hello world 1337";
 	char sub[] = "worl";
@@ -111,4 +108,4 @@ int main()
 	printf("%s\n", strnstr(str, sub, 0));
 
 	return (0);
-}
+} */

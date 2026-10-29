@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 14:54:26 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/20 16:58:09 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/29 21:57:13 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char **ft_split(char const *s, char c)
 	result[j] = NULL;
 	return (result);
 }
-
+/*
 int main(void)
 {
     char **result;
@@ -82,7 +82,7 @@ int main(void)
     free(result[1]);
     free(result);
     return (0);
-}
+} */
 
 /* int main()
 {
