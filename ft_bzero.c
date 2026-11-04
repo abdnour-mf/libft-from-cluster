@@ -6,14 +6,13 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:50:35 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/13 18:52:59 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/30 19:29:51 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }

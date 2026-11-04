@@ -6,53 +6,32 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 17:07:12 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/20 16:48:22 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/02 22:27:50 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* size_t ft_strlen(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t len;
-    
-    len = 0;
-    while (*s)
-    {
-        s++;
-        len++;
-    }
-    return (len);
-} */
+	size_t	i;
+	char	*str;
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char *sub;
-	size_t i;
-
-	i = 0;
 	if (!s)
-		len = 0;
-	if (start >= ft_strlen(s))
 		return (NULL);
+	i = 0;
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
-	sub = malloc(len + 1);
-	if (!sub)
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
-	while (i < len)
+	while (i < len && s[start + i])
 	{
-		sub[i] = s[i + start];
+		str[i] = s[start + i];
 		i++;
 	}
-	sub[i] = '\0';
-	return (sub);
+	str[i] = '\0';
+	return (str);
 }
-
-/* int main()
-{
-	char *s = "hello world";
-	char *r = ft_substr(s, 3, 4);
-	printf("%s\n", r);
-	return (0);
-} */

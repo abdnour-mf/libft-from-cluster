@@ -6,41 +6,28 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:18:11 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/29 21:59:05 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/02 22:40:47 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *res;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
-	res = malloc(ft_strlen(s) + 1);
-	if (!res)
-		return (NULL);
 	i = 0;
-	while(s[i])
+	if (!s || !f)
+		return (NULL);
+	str = malloc(ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		res[i] = (*f)(i,s[i]);
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
-	res[i] = '\0';
-	return (res);
+	str[i] = '\0';
+	return (str);
 }
-
-/*static char to_up(unsigned int i, char c)
-{
-	(void)i;
-	if (c >= 'A' && c <= 'Z')
-		return(c + 32);
-	return (c);
-}
-
- int main()
-{
-	char *res = ft_strmapi("catHUIUG", to_up);
-	printf("%s\n", res);
-	return (0);
-} */

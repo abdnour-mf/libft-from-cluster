@@ -6,32 +6,20 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:58:13 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/29 21:59:49 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:27:27 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list *new;
+	t_list	*node;
 
-	new = malloc (sizeof(t_list));
-	if (!new)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
-
-/* int main()
-{
-	t_list *new = ft_lstnew("A");
-	t_list *n = ft_lstnew("2");
-	new->next = n;
-	n->next = NULL;
-	
-	
-	
-	printf("%s\n", (char *)new->content);
-} */

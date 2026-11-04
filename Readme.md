@@ -84,7 +84,7 @@ Other Makefile rules:
 
 ### Usage
 
-Include `libft.h` in your C source file:
+Include `libft.h` in the C source file:
 
 ```c
 #include "libft.h"
@@ -108,6 +108,7 @@ cc -Wall -Wextra -Werror main.c -o program
 ### References
 
 - The 42 Libft project subject
+- https://makefiletutorial.com/
 - Linux manual pages (`man`) for the standard C library functions
 - C language and compiler documentation
 - Peer learning and practical testing
@@ -116,7 +117,7 @@ cc -Wall -Wextra -Werror main.c -o program
 
 AI tools were used as a learning aid to:
 
-- Clarify the behavior of standard functions
+- Clarify the behavior of some functions
 - Identify edge cases
 - Discuss memory management
 - Help design tests comparing my functions with the standard library versions

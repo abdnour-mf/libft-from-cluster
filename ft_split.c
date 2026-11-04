@@ -6,89 +6,82 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 14:54:26 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/29 21:57:13 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/02 22:38:24 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t counter (char const *s, char c)
+static size_t	counter(char const *s, char c)
 {
-	size_t i;
-	size_t count;
+	size_t	i;
+	size_t	count;
 
+	if (!s)
+		return (0);
 	i = 0;
 	count = 0;
-	
 	while (s[i])
 	{
-		if (s[i] != c)
-		{
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
 			count++;
-			while(s[i] && s[i] != c)
-				i++;
-		}
-		else
+		while (s[i] && s[i] != c)
 			i++;
 	}
 	return (count);
 }
 
-
-
-char **ft_split(char const *s, char c)
+static char	**free_split(char **result, size_t count)
 {
-	char **result;
-	size_t i;
-	size_t j;
-	size_t start;
-	size_t len;
-	
-	
+	size_t	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (NULL);
+}
+
+static char	**fill_words(char const *s, char c, char **result)
+{
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
 	i = 0;
 	j = 0;
-	result = ft_calloc((counter(s, c) + 1), sizeof(char *));
-	if (!result)
-		return (NULL);
-	while(s[i])
+	while (s[i])
 	{
-		if (s[i] != c)
+		while (s[i] && s[i] == c)
+			i++;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (start != i)
 		{
-			len = 0;
-			start = i;
-			while (s[i] != c && s[i])
-			{	
-				len++;
-				i++;
-			}
+			result[j] = ft_substr(s, start, i - start);
+			if (!result[j])
+				return (free_split(result, j));
+			j++;
 		}
-		result [j] = ft_substr(s, start, len);
-		j++;
-		i++;
 	}
 	result[j] = NULL;
 	return (result);
 }
-/*
-int main(void)
-{
-    char **result;
 
-    result = ft_split("hello world", ' ');
-    printf("%s\n", result[0]);
-    printf("%s\n", result[1]);
-    printf("%p\n", (void *)result[2]);
-    free(result[0]);
-    free(result[1]);
-    free(result);
-    return (0);
-} */
-
-/* int main()
+char	**ft_split(char const *s, char c)
 {
-	printf("%lu\n", counter("  hh hshs hs hxhs hs ", ' '));
-	printf("%lu\n", counter(" ", ' '));
-	printf("%lu\n", counter("", ' '));
-	printf("%lu\n", counter("hello wrold", ' '));
-	return (0);
-} */
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = malloc((counter(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	return (fill_words(s, c, result));
+}

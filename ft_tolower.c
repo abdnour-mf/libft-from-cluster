@@ -6,13 +6,15 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 16:50:13 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/15 12:20:17 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/10/30 19:37:48 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        c += 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

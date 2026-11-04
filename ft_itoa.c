@@ -6,81 +6,55 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 13:23:30 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/29 21:58:45 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/04 23:11:21 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int counter(int n)
+static size_t	counter(long n)
 {
-	long nb;
-	int count;
+	size_t	digit;
 
-	nb = n;
-	count = 0;
-	if (n <= 0)
-	{
-		count = 1;
-		nb = -nb;
-	}
-	while (nb >= 1)
-	{
-		nb = nb/10;
-		count++;
-	}
-	return (count);
-}
-
-char *ft_itoa(int n)
-{
-	char *num;
-	int i;
-	int size = counter(n);
-	
-	i = size - 1;
-	if (n == -2147483648)
-		return ("-2147483648");
+	digit = 0;
 	if (n == 0)
-		return (ft_strdup("0"));
-	num = malloc(size + 1);
-	if (!num)
-		return (NULL);
+		return (1);
 	if (n < 0)
 	{
-		num[0] = '-';
+		digit++;
 		n = -n;
 	}
-	while (n)
+	while (n > 0)
 	{
-		num[i--] = n % 10 + '0';
-		n = n / 10;
+		n /= 10;
+		digit++;
 	}
-	num[size] = '\0';
-	return (num);
+	return (digit);
 }
 
-/* int main()
+char	*ft_itoa(int n)
 {
-	char *num = ft_itoi(-1234);
-	printf("%s\n", num);
-	return (0);
-} */
+	char	*number;
+	long	nb;
+	size_t	i;
 
-
-/* int	main(void)
-{
-	printf("ft: %s | expected: %s\n", ft_itoa(0), "0");
-	printf("ft: %s | expected: %s\n", ft_itoa(-0), "0");
-	printf("ft: %s | expected: %s\n", ft_itoa(1), "1");
-	printf("ft: %s | expected: %s\n", ft_itoa(-1), "-1");
-	printf("ft: %s | expected: %s\n", ft_itoa(42), "42");
-	printf("ft: %s | expected: %s\n", ft_itoa(+42), "42");
-	printf("ft: %s | expected: %s\n", ft_itoa(-42), "-42");
-	printf("ft: %s | expected: %s\n", ft_itoa(2147483647), "2147483647");
-	printf("ft: %s | expected: %s\n", ft_itoa(-2147483648), "-2147483648");
-	printf("ft: %s | expected: %s\n", ft_itoa(2147483646), "2147483646");
-	printf("ft: %s | expected: %s\n", ft_itoa(-2147483647), "-2147483647");
-
-	return (0);
-} */
+	nb = n;
+	i = counter(n);
+	number = malloc((i + 1) * sizeof(char));
+	if (!number)
+		return (NULL);
+	if (nb == 0)
+		number[0] = '0';
+	if (nb < 0)
+	{
+		number[0] = '-';
+		nb = -nb;
+	}
+	number[i] = '\0';
+	while (nb)
+	{
+		number[--i] = nb % 10 + '0';
+		nb /= 10;
+	}
+	return (number);
+}

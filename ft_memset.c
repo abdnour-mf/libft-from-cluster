@@ -6,43 +6,41 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 16:27:44 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/29 21:47:56 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/04 22:54:14 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+// fill the first n bytes with the value of c
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *s = (unsigned char *)b;
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
-		s[i] = (unsigned char)c;
+		((unsigned char *)s)[i] = (unsigned char)c;
 		i++;
 	}
 	return (s);
 }
 
-
-/* #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-int main()
+/* #include <stdio.h>
+int main ()
 {
-	char str1[] = "un dia de partit";
-    char str2[] = "un dia de partit";
-
-    ft_memset(str1 + 3, '.', 3);
-    memset(str2 + 3, '.', 3);
-
-    printf("ft_memset: %s\n", str1);
-    printf("memset:    %s\n", str2); 
-
-	int s1[] = {1, 1, 0, 2};
-	printf("%d\n", ft_memset(s1, 'X', 3));
+	int nb = 2006;
 	
-	return (0);
+	ft_memset(&nb, 5, 2);
+	ft_memset(&nb, 1337, 1);
+	
+	printf("%d\n", nb);
 } */
+//707406378
+
+//00000000 00000000 00000101 00111001
+
+//deference (access , edit)
+
+//0xFF -> 255

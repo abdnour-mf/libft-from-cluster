@@ -6,13 +6,13 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 19:50:31 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/19 19:53:24 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/04 22:52:25 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
@@ -20,10 +20,22 @@ void ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 
+/* #include <fcntl.h>
+#include <stdio.h>
 int main()
 {
-	char s[] = "hello world";
-	ft_putendl_fd(s, 1);
-	ft_putendl_fd(s, 2);
-	return 0;
-}
+	int fd = open("file.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
+	if (fd == -1)
+		printf("error");
+	else 
+		printf("okay");
+	char *name = "kkjj";
+	ft_putendl_fd(name, fd);
+} */
+
+// open() system call
+// return -1 if there is failure 
+// return fd 
+// open(filename, oflags, permissions)
+// close()
+//O_TRUNC
