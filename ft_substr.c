@@ -15,15 +15,17 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
+	size_t	slen;
 	char	*str;
 
 	if (!s)
 		return (NULL);
+	slen = ft_strlen(s);
 	i = 0;
-	if (start >= ft_strlen(s))
+	if (start >= slen)
 		return (ft_strdup(""));
-	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
+	if (len > slen - start)
+		len = slen - start;
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
