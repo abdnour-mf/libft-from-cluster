@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 21:09:37 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/10/29 21:09:37 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/05 22:35:36 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
-
-// # include <stdio.h>
-// # include <string.h>
 
 typedef struct s_list
 {
