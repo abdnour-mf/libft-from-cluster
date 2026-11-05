@@ -109,6 +109,8 @@ cc -Wall -Wextra -Werror main.c -o program
 
 - The 42 Libft project subject
 - https://makefiletutorial.com/
+- https://www.geeksforgeeks.org/
+- https://medium.com/
 - Linux manual pages (`man`) for the standard C library functions
 - C language and compiler documentation
 - Peer learning and practical testing

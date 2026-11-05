@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:43:33 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/11/04 22:53:46 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/05 19:58:12 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb == 0 && size == 0)
+	if (nmemb == 0 || size == 0)
 	{
 		nmemb = 1;
 		size = 1;

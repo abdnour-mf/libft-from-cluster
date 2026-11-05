@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:33:16 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/11/04 23:20:14 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/05 20:49:11 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	slen = ft_strlen(src);
+	dlen = 0;
+	while (dlen < size && dst[dlen])
+		dlen++;
 	i = 0;
-	if (size == 0)
-		return (slen);
-	dlen = ft_strlen(dst);
-	if (dlen >= size)
+	if (dlen == size)
 		return (slen + size);
 	while (dlen + i < size - 1 && src[i])
 	{
@@ -33,5 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dlen + i] = '\0';
 	return (dlen + slen);
 }
-
-// check this dlen = ft_strlen(dst);

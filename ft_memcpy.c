@@ -6,7 +6,7 @@
 /*   By: amfarrej <amfarrej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:19:45 by amfarrej          #+#    #+#             */
-/*   Updated: 2026/11/04 22:34:13 by amfarrej         ###   ########.fr       */
+/*   Updated: 2026/11/05 20:23:07 by amfarrej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+/* #include <string.h>
+int main()
+{
+	printf("%s\n", (char *)ft_memcpy(NULL, NULL, 2));
+	printf("%s\n", (char *)ft_memcpy(NULL, NULL, 0));
+} */
